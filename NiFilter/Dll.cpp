@@ -45,14 +45,12 @@
 
 #define CreateComObject(clsid, iid, var) CoCreateInstance( clsid, NULL, CLSCTX_INPROC_SERVER, iid, (void **)&var);
 
-STDAPI AMovieSetupRegisterServer(CLSID clsServer, LPCWSTR szDescription, LPCWSTR szFileName,
-                                 LPCWSTR szThreadingModel = L"Both", LPCWSTR szServerType = L"InprocServer32");
+STDAPI AMovieSetupRegisterServer(CLSID clsServer, LPCWSTR szDescription, LPCWSTR szFileName, LPCWSTR szThreadingModel = L"Both", LPCWSTR szServerType = L"InprocServer32");
 STDAPI AMovieSetupUnregisterServer(CLSID clsServer);
 
 
 // {EF8FEE39-9D94-4057-B25E-D0CD646D298C}
-DEFINE_GUID(CLSID_NiVirtualCam,
-	0xef8fee39, 0x9d94, 0x4057, 0xb2, 0x5e, 0xd0, 0xcd, 0x64, 0x6d, 0x29, 0x9c);
+DEFINE_GUID(CLSID_NiVirtualCam, 0xef8fee39, 0x9d94, 0x4057, 0xb2, 0x5e, 0xd0, 0xcd, 0x64, 0x6d, 0x29, 0x9c);
 
 
 const AMOVIESETUP_MEDIATYPE AMSMediaTypesKCam =
@@ -142,7 +140,6 @@ STDAPI RegisterFilters(BOOL bRegister)
 		}
 
 		// release interface
-		//
 		if (fm)
 			fm->Release();
 	}

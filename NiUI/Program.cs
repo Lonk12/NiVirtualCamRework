@@ -44,10 +44,8 @@ namespace NiUI
                     Process.Start(
                         new ProcessStartInfo(Application.ExecutablePath, "/auto_Corrected_Run")
                         {
-                            WorkingDirectory =
-                                address,
-                            UseShellExecute =
-                                true
+                            WorkingDirectory = address,
+                            UseShellExecute = true
                         });
                 }
 
